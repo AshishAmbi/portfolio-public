@@ -1,0 +1,183 @@
+/* ==========================================================================
+   BASE / RESET
+   Fonts are linked in each page's <head> (not @import'd here) so the
+   stylesheet doesn't block on a font fetch before the rest of the CSS
+   can parse.
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* Faint circuit-grid backdrop across the whole page, not just the hero */
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+h1 { font-size: var(--fs-4xl); }
+h2 { font-size: var(--fs-2xl); }
+h3 { font-size: var(--fs-xl); }
+h4 { font-size: var(--fs-md); }
+
+p {
+  color: var(--text-muted);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* ---- Layout primitives ---- */
+
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+}
+
+.section {
+  padding-block: var(--space-9);
+}
+
+.section-head {
+  max-width: 640px;
+  margin-bottom: var(--space-7);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--blue-soft);
+  margin-bottom: var(--space-3);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gradient-signal);
+  box-shadow: 0 0 8px var(--blue);
+}
+
+.section-head h2 {
+  margin-bottom: var(--space-3);
+}
+
+.section-head p {
+  font-size: var(--fs-md);
+}
+
+.grid {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* ---- Focus visibility (accessibility floor) ---- */
+:focus-visible {
+  outline: 2px solid var(--blue-soft);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--bg-elevated-2);
+  border-radius: var(--radius-pill);
+  border: 2px solid var(--bg);
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: var(--fs-3xl); }
+  h2 { font-size: var(--fs-xl); }
+  .section { padding-block: var(--space-8); }
+  .container { padding-inline: var(--space-5); }
+}

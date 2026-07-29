@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About · Portfolio</title>
+<meta name="description" content="Education, career objective, internship summary and achievements." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<div class="page-loader" id="page-loader"><div class="loader-trace"></div></div>
+<div id="navbar-root"></div>
+
+<main id="about-content">
+  <section class="section container" style="padding-top: calc(var(--nav-height) + var(--space-7));">
+    <div class="about-hero">
+      <div data-aos="fade-right">
+        <div class="chip-frame">
+          <img id="about-photo" src="assets/images/placeholder-profile.jpg" alt="Profile photo" />
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <span class="eyebrow">About Me</span>
+        <h1 style="font-size: var(--fs-2xl); margin-bottom: var(--space-4);">Professional Introduction</h1>
+        <p id="about-intro" style="font-size: var(--fs-md); color: var(--text-muted); margin-bottom: var(--space-5);">
+          Loading introduction…
+        </p>
+        <a href="#" class="btn btn-primary" id="resume-download-btn" aria-disabled="true" download>
+          <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><div class="trace-divider" role="presentation"></div></div>
+
+  <section class="section container">
+    <div class="grid" style="grid-template-columns: 1fr 1fr; gap: var(--space-8);">
+      <div>
+        <div class="section-head">
+          <span class="eyebrow">Background</span>
+          <h2>Education</h2>
+        </div>
+        <div id="education-list" data-aos="fade-up">
+          <div class="skeleton" style="height:70px; margin-bottom:16px;"></div>
+          <div class="skeleton" style="height:70px;"></div>
+        </div>
+      </div>
+      <div>
+        <div class="section-head">
+          <span class="eyebrow">Where I'm Headed</span>
+          <h2>Career Objective</h2>
+        </div>
+        <p id="about-objective" class="glass-card" style="padding: var(--space-5);" data-aos="fade-up">
+          Loading…
+        </p>
+
+        <div class="section-head" style="margin-top: var(--space-7);">
+          <span class="eyebrow">Hands-on</span>
+          <h2>Internship Summary</h2>
+        </div>
+        <p id="about-internship-summary" class="glass-card" style="padding: var(--space-5);" data-aos="fade-up">
+          Loading…
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><div class="trace-divider" role="presentation"></div></div>
+
+  <section class="section container">
+    <div class="section-head">
+      <span class="eyebrow">Highlights</span>
+      <h2>Achievements</h2>
+    </div>
+    <ul class="achievement-list glass-card" id="achievements-list" style="padding: var(--space-5);" data-aos="fade-up">
+      <li>Loading…</li>
+    </ul>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script type="module" src="js/pages/about.js"></script>
+</body>
+</html>

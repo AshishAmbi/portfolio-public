@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Experience · Portfolio</title>
+<meta name="description" content="Internships, certifications, and achievements." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<div class="page-loader" id="page-loader"><div class="loader-trace"></div></div>
+<div id="navbar-root"></div>
+
+<main>
+  <section class="section container" style="padding-top: calc(var(--nav-height) + var(--space-7));">
+    <div class="section-head">
+      <span class="eyebrow">Track Record</span>
+      <h1 style="font-size: var(--fs-2xl);">Experience</h1>
+      <p>Internships, certifications, and achievements.</p>
+    </div>
+
+    <div class="tab-bar">
+      <button class="tab-btn active" data-target="internships-panel"><i class="fa-solid fa-briefcase"></i> Internships</button>
+      <button class="tab-btn" data-target="certifications-panel"><i class="fa-solid fa-certificate"></i> Certifications</button>
+      <button class="tab-btn" data-target="achievements-panel"><i class="fa-solid fa-trophy"></i> Achievements</button>
+    </div>
+
+    <div class="tab-panel active" id="internships-panel">
+      <div class="skeleton" style="height:140px; margin-bottom:16px;"></div>
+    </div>
+    <div class="tab-panel" id="certifications-panel">
+      <div class="skeleton" style="height:110px; margin-bottom:16px;"></div>
+    </div>
+    <div class="tab-panel" id="achievements-panel">
+      <div class="skeleton" style="height:140px; margin-bottom:16px;"></div>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script type="module" src="js/pages/experience.js"></script>
+</body>
+</html>

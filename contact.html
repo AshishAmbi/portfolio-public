@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact · Portfolio</title>
+<meta name="description" content="Get in touch — email, phone, LinkedIn, or send a message directly." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/base.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/pages.css" />
+</head>
+<body>
+
+<div class="page-loader" id="page-loader"><div class="loader-trace"></div></div>
+<div id="navbar-root"></div>
+
+<main>
+  <section class="section container" style="padding-top: calc(var(--nav-height) + var(--space-7));">
+    <div class="section-head">
+      <span class="eyebrow">Let's Build Something</span>
+      <h1 style="font-size: var(--fs-2xl);">Get In Touch</h1>
+      <p>Have a project, internship opportunity, or just want to talk embedded systems? Send a message.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="glass-card contact-info-card" data-aos="fade-right">
+        <div class="contact-info-item">
+          <span class="icon-box"><i class="fa-solid fa-envelope"></i></span>
+          <div><strong>Email</strong><p id="contact-email">you@example.com</p></div>
+        </div>
+        <div class="contact-info-item">
+          <span class="icon-box"><i class="fa-solid fa-phone"></i></span>
+          <div><strong>Phone</strong><p id="contact-phone">+91 00000 00000</p></div>
+        </div>
+        <div class="contact-info-item">
+          <span class="icon-box"><i class="fa-solid fa-location-dot"></i></span>
+          <div><strong>Location</strong><p id="contact-location">Pune, Maharashtra, India</p></div>
+        </div>
+        <div class="contact-info-item">
+          <span class="icon-box"><i class="fa-brands fa-linkedin-in"></i></span>
+          <div><strong>LinkedIn</strong><p><a id="contact-linkedin" href="#" target="_blank" rel="noopener">linkedin.com/in/yourname</a></p></div>
+        </div>
+      </div>
+
+      <form class="glass-card contact-form-card" id="contact-form" data-aos="fade-left" novalidate>
+        <div class="field" data-field="name">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+          <span class="field-error"></span>
+        </div>
+        <div class="field" data-field="email">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+          <span class="field-error"></span>
+        </div>
+        <div class="field" data-field="subject">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" placeholder="What's this about?" />
+        </div>
+        <div class="field" data-field="message">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me a bit more…" required></textarea>
+          <span class="field-error"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          <i class="fa-solid fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="footer-root"></div>
+<button class="scroll-top-btn" id="scroll-top-btn" aria-label="Scroll to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script type="module" src="js/pages/contact.js"></script>
+</body>
+</html>
